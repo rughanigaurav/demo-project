@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - main
+      - self-hosted
 jobs:
   build:
     runs-on: ubuntu-latest

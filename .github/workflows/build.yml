@@ -8,36 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2 
-        
       - name: npm install
         run: npm install --legacy-peer-deps
         
       - name: Build
         run: CI=false PUBLIC_URL=/ npm run build
-
-      - name: zip the files
-        uses: thedoctor0/zip-release@0.7.1
-        with:
-           type: 'zip'
-           filename:  'release.zip'
-           path: 'build'
- 
-      - name: Add SHORT_SHA env property with commit short sha
-        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
-
-      - name: Set current date as env variable
-        run: echo "NOW=$(date +'%Y%m%d%H%M')" >> $GITHUB_ENV
-
-      - name: publish
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: 'release.zip'
-          body: 'publish new release'
-          tag: ${{ env.NOW }}
-          commit:  ${{ github.sha }}
-      
+    
       - name: Get Github action IP
         id: ip
         uses: haythem/public-ip@v1.2

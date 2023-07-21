@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - main
+      - rughanigaurav-patch1
 jobs:
   build:
     runs-on: ubuntu-latest

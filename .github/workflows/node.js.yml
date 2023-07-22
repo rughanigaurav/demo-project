@@ -10,21 +10,65 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+      - name: Checkout
+        uses: actions/checkout@v3 
+        
+      - name: npm install
+        run: npm install --legacy-peer-deps
+        
+      - name: Build
+        run: CI=false PUBLIC_URL=/ npm run build
+
+      - name: zip the files
+        uses: thedoctor0/zip-release@0.7.1
+        with:
+           type: 'zip'
+           filename:  'release.zip'
+           path: 'build'
+ 
+      - name: Add SHORT_SHA env property with commit short sha
+        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+
+      - name: Set current date as env variable
+        run: echo "NOW=$(date +'%Y%m%d%H%M')" >> $GITHUB_ENV
+
+      - name: publish
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: 'release.zip'
+          body: 'publish new release'
+          tag: ${{ env.NOW }}
+          commit:  ${{ github.sha }}
+      
+      - name: Get Github action IP
+        id: ip
+        uses: haythem/public-ip@v1.2
+      
+      - name: Add Github Actions IP to Security group
+        run: |
+          aws ec2 authorize-security-group-ingress --group-name launch-wizard-4 --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32    
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ap-south-1
+        
+      - name: deploy
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIR }}/frontend
+          SOURCE: build/
+
+      - name: Remove Github Actions IP from security group
+        run: |
+           aws ec2 revoke-security-group-ingress --group-name launch-wizard-4 --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ap-south-1
+        if: always()

@@ -19,15 +19,15 @@ jobs:
       - name: npm install
         run: npm install --legacy-peer-deps
         
-      - name: Build
-        run: CI=false PUBLIC_URL=/ npm run build
+      - name: Node.js CI
+        run: CI=false PUBLIC_URL=/ npm run Node.js CI
 
       - name: zip the files
         uses: thedoctor0/zip-release@0.7.1
         with:
            type: 'zip'
            filename:  'release.zip'
-           path: 'build'
+           path: 'Node.js CI'
  
       - name: Add SHORT_SHA env property with commit short sha
         run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV

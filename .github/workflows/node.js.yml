@@ -50,8 +50,8 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}/frontend
-          SOURCE: build/
+          TARGET: ${{ secrets.TARGET_DIR }}/main
+          SOURCE: Node.js/
     - name: Remove Github Actions IP from security group
       run: |
            aws ec2 revoke-security-group-ingress --group-name launch-wizard-4 --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32

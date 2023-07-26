@@ -22,13 +22,7 @@ jobs:
       run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
 
 
-    - name: publish
-      uses: ncipollo/release-action@v1
-      with:
-          artifacts: 'release.zip'
-          body: 'publish new release'
-          tag: ${{ env.NOW }}
-          commit:  ${{ github.sha }}
+    
       
     - name: Get Github action IP
       id: ip

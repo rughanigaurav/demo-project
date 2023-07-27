@@ -35,8 +35,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ap-south-1
         
-    - name: deploy
-      uses: demo-project/ssh-deploy@main
+    - name: SSH Deploy
+      uses: easingthemes/ssh-deploy@main
       env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}

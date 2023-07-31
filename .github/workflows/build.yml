@@ -20,11 +20,7 @@ jobs:
         
     - name: Add SHORT_SHA env property with commit short sha
       run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
-
-    - name: Build
-      run: CI=false PUBLIC_URL=/ npm run build
-    
-      
+       
     - name: Get Github action IP
       id: ip
       uses: haythem/public-ip@v1.2

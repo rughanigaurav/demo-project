@@ -21,7 +21,15 @@ jobs:
     - name: Add SHORT_SHA env property with commit short sha
       run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
 
+    - name: Build
+      run: CI=false PUBLIC_URL=/ npm run build
 
+    - name: zip the files
+      uses: thedoctor0/zip-release@0.7.1
+      with:
+           type: 'zip'
+           filename:  'release.zip'
+           path: 'build'
     
       
     - name: Get Github action IP

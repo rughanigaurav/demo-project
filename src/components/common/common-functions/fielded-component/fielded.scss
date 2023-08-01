@@ -1,0 +1,30 @@
+.status-button {
+  &.status-plus.disabled {
+    pointer-events: none;
+  }
+
+  &.date-field {
+    display: none;
+
+    &.show-minus {
+      display: block;
+    }
+  }
+}
+
+.date-check {
+  .hide-btn {
+    display: none;
+  }
+}
+
+.close-button {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  height: 16px;
+  padding-right: 1px;
+  cursor: pointer;
+}
+.last {
+  padding-right: 3px;
+}

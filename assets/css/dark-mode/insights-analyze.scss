@@ -1,0 +1,39 @@
+@import "../../../index.scss";
+
+.dark-mode {
+  #Analytics .card-body,
+  #Analytics .card-body input,
+  #Analytics .card-body div,
+  .chart-area .axis-block,
+  .chart-area button,
+  .sheets-list-bar,
+  .sheets-list-bar .h-100 {
+    background-color: var(--body_color) !important;
+  }
+
+  #Analytics .card-body .analyze-search-input,
+  #Analytics .card-body .droppable-fields-list .drop-box-block {
+    color: var(--text_white) !important;
+  }
+
+  #Analytics .card-header,
+  .title-change-input {
+    background-color: var(--search_background) !important;
+  }
+
+  #Analytics .card-header {
+    border-bottom: 1px solid var(--text_white) !important;
+  }
+
+  .chart-area .axis-block,
+  .chart-area button,
+  .title-change-input,
+  .sheets-list-bar {
+    border: 1px solid var(--text_white) !important;
+  }
+
+  .sheets-list-bar > div > div > .sheet-tag,
+  .sheets-list-bar > div:not(.h-100) {
+    border: 1px solid var(--text_white) !important;
+  }
+}

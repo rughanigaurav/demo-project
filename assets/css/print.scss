@@ -1,0 +1,73 @@
+@page {
+  margin: 0;
+}
+
+@media print {
+  html {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    page-break-inside: avoid;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  body {
+    &:after {
+      background: white !important;
+    }
+  }
+  body {
+    left: -300px;
+  }
+
+  #section-to-print,
+  #section-to-print * {
+    visibility: visible;
+  }
+
+  #section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    scale: 0.95 !important;
+    width: 100% !important;
+    border: none !important;
+    background: white !important;
+    .content-container {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .chart-page {
+      justify-content: center;
+    }
+    .chart-filter {
+      display: none;
+    }
+    .dropzone {
+      height: fit-content !important;
+    }
+    .chart-header {
+      height: 40px;
+      overflow: hidden;
+      .chart-title-heading {
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .closebtn {
+        display: none;
+      }
+    }
+    .chart-card {
+      box-shadow: 0px 4px 10px rgb(0 0 0 / 40%);
+      -webkit-filter: drop-shadow(0px 4px 10px rgb(0 0 0 / 40%));
+      -webkit-print-color-adjust: exact;
+      break-inside: avoid;
+    }
+    &.analyze-print {
+      left: -310px;
+    }
+  }
+}

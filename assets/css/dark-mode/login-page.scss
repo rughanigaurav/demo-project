@@ -1,0 +1,48 @@
+@import "../../../index.scss";
+
+.dark-mode {
+  .login-page-design .d-none {
+    background-color: var(--search_background) !important;
+  }
+
+  .login-page-design .para {
+    color: var(--text_white) !important;
+  }
+
+  .left-side-value,
+  .left-side-proposition {
+    color: var(--text_white);
+  }
+
+  .login-page-design .original-img {
+    background-color: var(--search_background) !important;
+    color: var(--text_white);
+  }
+
+  .login-page-design .button {
+    background-color: var(--body_color);
+    border: 1px solid var(--text_white) !important;
+    color: var(--text_white) !important;
+  }
+  .login-page-design .form-control {
+    color: var(--text_white) !important;
+  }
+
+  .login-main {
+    border: none;
+  }
+
+  .login-page-design {
+    border-top: 1px solid #707070;
+  }
+
+  .password-input-section svg {
+    filter: invert(100%);
+  }
+
+  .login-page-design > form > .form-group,
+  .login-main > form > div,
+  .login-page-design .form-control {
+    background-color: var(--body_color) !important;
+  }
+}

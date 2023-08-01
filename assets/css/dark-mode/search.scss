@@ -1,0 +1,329 @@
+@import "../../../index.scss";
+
+//Fielded
+.dark-mode {
+  .home-backline,
+  #Fielded .tabcontent,
+  .cm-editor,
+  .tablink:not(.active-filed),
+  .container-fluid .form-control,
+  .search-main .search-button,
+  .main-status button,
+  .main-status .main-selector,
+  .status-main .date-check,
+  .main-status .main-selector .select-dropdown__menu,
+  .status-main .operator-selector .select-dropdown__menu,
+  .status-main-for-input button,
+  .status-main-for-input .check-status textarea,
+  .operator-selector .select-dropdown__control,
+  .cm-scroller,
+  .footer-buttons button,
+  .fielded-text .text-area button,
+  #all-field-main .rs-dropdown .rs-dropdown-menu,
+  #all-field-main .rs-dropdown .rs-dropdown-inner-menu,
+  .nav .dropdown-menu,
+  .select-dropdown .select-dropdown__control {
+    background-color: var(--body_color) !important;
+  }
+
+  #all-field-main .rs-dropdown .rs-dropdown-menu .outer:hover,
+  #all-field-main .rs-dropdown .rs-dropdown-menu .inner:hover {
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+  }
+
+  #all-field-main .rs-dropdown .rs-dropdown-menu .outer:hover {
+    background: #ffffff !important;
+  }
+
+  .search-main .search-button img,
+  .main-status .main-selector div svg,
+  .operator-selector .select-dropdown__control div svg,
+  .tablink:not(.active-filed) img,
+  .fielded-text .text-area img,
+  .nav .dropdown-menu img {
+    filter: invert(100%);
+  }
+
+  .status-state-type-pub button img,
+  .add-button-county img,
+  .status-plus img {
+    filter: brightness(100);
+  }
+
+  .nav .dropdown-menu a:hover img {
+    filter: none;
+  }
+
+  .nav .dropdown-menu {
+    border: 1px solid var(--text_white);
+  }
+
+  .search-main .search-button,
+  #Fielded,
+  #Fielded .fields-form {
+    border: 1px solid var(--text_white);
+  }
+
+  .main-status .main-selector .select-dropdown__menu,
+  .status-main .operator-selector .select-dropdown__menu {
+    border: 1px solid var(--text_white);
+    border-top: none;
+  }
+
+  .status-main-for-input button {
+    border: 1px solid var(--text_white);
+  }
+
+  .date-section .status-button {
+    border-radius: 0 0;
+  }
+
+  .main-status {
+    border: 1px solid var(--text_white);
+  }
+
+  .country-button-action {
+    .remove-button-county {
+      border-radius: 0 10px 10px 0;
+    }
+    .add-button-county {
+      border-radius: 0 !important;
+    }
+    .edit-button-add {
+      border-radius: 0 10px 10px 0 !important;
+    }
+  }
+
+  .fields-form .country-section .status-main .add-button-county {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .main-status .main-selector .select-dropdown__control {
+    border-radius: 0 10px 10px 0;
+    border: none;
+    border-right: none;
+    border-left: 1px solid var(--text_white);
+    border-left-width: 0.5px;
+  }
+
+  .status-state-type-pub .select-dropdown__control {
+    min-height: 24px;
+  }
+
+  .main-selector .select-dropdown .select-dropdown__single-value {
+    width: 100%;
+  }
+
+  .header-bg {
+    background-color: var(--header_bg) !important;
+  }
+
+  // .container-fluid,
+  .search-holder-main {
+    background-color: var(--search_background);
+  }
+
+  .navbar-light {
+    .navbar-nav {
+      .nav-link {
+        color: var(--text_white);
+
+        &.active {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .field-text,
+  .container-fluid .form-control,
+  .main-status .main-selector div,
+  .operator-selector .select-dropdown__control div,
+  .cm-editor .cm-line,
+  .cm-editor .cm-line .ͼ18,
+  .syntax-check,
+  .tablink:not(.active-filed),
+  .expert-page-design .table_row,
+  .date-section .to-date,
+  .footer-buttons button,
+  .fielded-text .text-area button,
+  .check-status textarea,
+  #all-field-main .rs-dropdown .rs-dropdown-menu > li,
+  #all-field-main .rs-dropdown .rs-dropdown-inner-menu,
+  .status-main .operator-selector .select-dropdown__menu div,
+  .nav .dropdown-menu .dropdown-item,
+  .select-dropdown .select-dropdown__option:hover {
+    color: var(--text_white) !important;
+  }
+
+  .cm-editor .cm-line span {
+    color: var(--text_white) !important;
+    background-color: transparent !important;
+    background-clip: text;
+  }
+
+  .status-main .check-status {
+    background: none;
+  }
+
+  .main-status .select-dropdown > div:hover,
+  .cm-editor .cm-line::selection,
+  #all-field-main .rs-dropdown .rs-dropdown-menu li:hover,
+  .status-main .operator-selector .select-dropdown__menu div::selection {
+    color: var(--text_black) !important;
+  }
+
+  .select-dropdown .select-dropdown__option:hover,
+  .select-dropdown .select-dropdown__option.select-dropdown__option--is-focused,
+  .operator-selector .select-dropdown .select-dropdown__option:hover,
+  .operator-selector
+    .select-dropdown
+    .select-dropdown__option.select-dropdown__option--is-focused {
+    background-color: var(--text_white) !important;
+    color: var(--text_black) !important;
+  }
+
+  .nav .dropdown-menu .dropdown-item:hover {
+    color: var(--text_black) !important;
+    filter: none;
+  }
+
+  #Expert,
+  #Number,
+  .number-page-design {
+    background-color: var(--feature-bg) !important;
+  }
+
+  .number-section,
+  #final-result {
+    color: var(--text_white) !important;
+  }
+
+  //common
+
+  .select-year {
+    width: 200px !important;
+    display: flex;
+    gap: 8px;
+    border-radius: 10px;
+    margin-bottom: -12px;
+    margin-top: -3px;
+    transition: background-color 0.3s ease-in-out;
+
+    label {
+      margin-top: 6px;
+      white-space: nowrap;
+    }
+
+    button.selected {
+      background-color: #0048a2 !important;
+      color: white !important;
+    }
+
+    button {
+      background: #ffffff !important;
+      color: #000;
+      width: 50px;
+      height: 26px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .year-dd {
+    margin-bottom: -8px;
+  }
+
+  input[type="checkbox"] {
+    background-color: var(--body_color) !important;
+    border-color: var(--text_white);
+  }
+
+  .tabcontaint:not(#Expert) .cm-editor,
+  .cm-editor {
+    background-color: var(--text_white);
+    border-radius: 10px;
+  }
+
+  .home-page-content .active-filed {
+    background-color: var(--primary_btn_bg);
+    color: var(--link_color);
+  }
+
+  #Fielded,
+  .tabcontent,
+  .cm-theme,
+  .main-expert-design,
+  .text_wrapper_number {
+    background-color: var(--feature-bg) !important;
+  }
+
+  //expert
+
+  .expert-page-design .searchbar input,
+  .expert-page-design .table_row,
+  .main-expert-design .clear-all,
+  .main-expert-design .input-button-text-form {
+    background-color: var(--body_color) !important;
+  }
+
+  .expert-page-design .expert-suggestion-searchbar,
+  .number-section .family-input-select,
+  .main-expert-design .clear-all,
+  .main-expert-design .input-button-text-form {
+    color: var(--text_white);
+  }
+
+  .expert-page-design {
+    .col-field,
+    .col-shortcode {
+      background-color: var(--search_background);
+    }
+  }
+
+  .main-expert-design .input-button-text-form img {
+    filter: invert(100%);
+  }
+
+  // Number
+
+  .number-section .family-input-select,
+  .number-section .family-input-select .single-family-item,
+  .number-section .family-input-select .drop-down-window,
+  .number-section .file-upload .upload-btn,
+  .number-section .rs-checkbox-wrapper,
+  .main-number-design .clear-all,
+  .main-number-design .input-button-text-form {
+    background-color: var(--body_color);
+  }
+
+  .number-section .family-input-select .single-family-item:hover {
+    background-color: var(--text_white);
+  }
+
+  .number-section .file-upload .upload-btn,
+  .main-number-design .clear-all,
+  .main-number-design .input-button-text-form {
+    color: var(--text_white);
+  }
+
+  .main-number-design .input-button-text-form img {
+    filter: invert(100%);
+  }
+
+  .number-section .family-input-select .single-family-item:hover {
+    color: var(--text_black);
+  }
+
+  .main-number-design {
+    .number-section {
+      .file-upload {
+        .file-name,
+        #final-result {
+          color: var(--text_white);
+          border-bottom: 1px solid #ffffff;
+        }
+      }
+    }
+  }
+}

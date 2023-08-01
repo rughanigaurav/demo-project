@@ -1,0 +1,130 @@
+@import "../../../index.scss";
+@import "class-suggester.scss";
+@import "download-center.scss";
+@import "forgot-password.scss";
+@import "history.scss";
+@import "insights-analyze.scss";
+@import "insights-cognizance.scss";
+@import "login-page.scss";
+@import "maintenance.scss";
+@import "page-not-found.scss";
+@import "patent-view.scss";
+@import "quick-view.scss";
+@import "rwire-patents.scss";
+@import "search.scss";
+@import "reset-link-expire.scss";
+
+.dark-mode {
+  background: none;
+
+  .pagination-block,
+  .patent-right-side,
+  .history-page,
+  .login-inner-left,
+  .react-datepicker__header select {
+    background-color: var(--body_color) !important;
+  }
+
+  .text-area-syntax > div:first-child,
+  .pub-status-green {
+    color: #07f307 !important;
+  }
+  .textarea > button {
+    background-color: var(--text_white) !important;
+    color: #121212;
+  }
+  .main-selector,
+  .suggestion-title {
+    color: var(--text_white) !important;
+  }
+
+  .action-buttons-block {
+    background-color: var(--search_background) !important;
+  }
+
+  .tablink-selected {
+    background-color: var(--primary_btn_bg);
+  }
+
+  .family-input-select,
+  .page-number-dropdown {
+    color: var(--body_color);
+  }
+
+  .query-text,
+  .select-section {
+    color: var(--text_white);
+  }
+
+  #final-result,
+  .react-datepicker__header select,
+  .react-datepicker-wrapper .date-search {
+    color: var(--text_white) !important;
+  }
+
+  .react-datepicker__header button {
+    border: none;
+  }
+
+  .main-selector {
+    background-color: var(--text_white);
+    border-radius: 0 10px 10px 0;
+  }
+
+  .table-wrapper,
+  .table-column {
+    color: var(--text_white);
+    background-color: var(--feature-bg) !important;
+  }
+
+  .table-wrapper img,
+  .date-check img,
+  .search-double-column .country-section .outer .rs-dropdown-inner-menu img {
+    filter: invert(100%);
+  }
+
+  .react-datepicker-popper .react-datepicker__header button {
+    border: none !important;
+  }
+
+  .status-main .rs-dropdown .rs-dropdown-item:hover {
+    background-color: var(--text_white);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #AEAEAE;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #AEAEAE;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #FFFFFF;
+  }
+  .national-notification-tooltip {
+    .tooltip-inner {
+      background-color: white;
+      color: black;
+    }
+  }
+  .national-notification-i-icon {
+    color: white;
+  }
+  .tooltip-arrow::before {
+    border-right-color: white;
+  }
+}
+
+body.dark-mode:after {
+  background: #121212;
+}

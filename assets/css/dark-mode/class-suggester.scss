@@ -1,0 +1,124 @@
+@import "../../../index.scss";
+
+// class suggester
+
+.dark-mode {
+  .classes-suggestor-modal {
+    .modal-title,
+    .form-inputs .suggestion-input,
+    .form-action-button .search-query button,
+    .model-footer-buttons button,
+    .jump_to_page .go-btn {
+      background-color: var(--body_color) !important;
+    }
+
+    .form-inputs .suggestion-input,
+    .form-action-button button,
+    .jump_to_page .go-btn,
+    .model-footer-buttons button,
+    .rc-pagination .rc-pagination-item,
+    .pagination .pages_input_box {
+      border: 1px solid var(--text_white) !important;
+    }
+
+    .form-action-button .form-checkbox.active,
+    .rc-pagination .rc-pagination-item-active {
+      border: 1px solid var(--text_black) !important;
+    }
+
+    .rc-pagination-prev,
+    .rc-pagination-next .rc-pagination-item-link {
+      background-image: var("../");
+    }
+
+    .pagination {
+      .rc-pagination-prev button,
+      .rc-pagination-next button {
+        background-color: var(--text_white) !important;
+      }
+    }
+    .modal-title .modal-title-heading,
+    .form-inputs .label,
+    .no-records-found,
+    .suggestion-input,
+    .form-action-button .search-query button,
+    .jump_to_page .go-btn,
+    .model-footer-buttons button {
+      color: var(--text_white) !important;
+    }
+
+    .form-action-button .form-checkbox.active {
+      color: var(--text_black) !important;
+    }
+
+    .form-action-button .form-checkbox.active {
+      background-color: var(--primary_btn_bg) !important;
+    }
+  }
+
+  .classes-suggestor-modal__wrapper .form-check-input:checked[type="checkbox"] {
+    border: 1px solid var(--text_white);
+    background-image: none;
+    background-image: url("../../../images/checked-dark.svg");
+    filter: brightness(20);
+  }
+
+  //keyword suggestor
+
+  .rs-modal-content .classes-suggestor-modal__wrapper button,
+  .form-action-button .rs-dropdown .rs-dropdown-menu {
+    background-color: var(--body_color) !important;
+  }
+
+  .rs-modal-dialog .modal-title {
+    background-color: #575757 !important;
+  }
+
+  .keyword-suggestor-modal
+    .classes-suggestor-modal__wrapper
+    .form-check-input:checked[type="checkbox"] {
+    border: 1px solid var(--text_white);
+    background-image: none;
+    background-image: url("../../../images/checked-dark.svg");
+    filter: brightness(20);
+  }
+
+  .keyword-suggestor-modal .suggestion-input {
+    background: var(--body_color) !important;
+  }
+
+  .keyword-suggestor-modal .suggestion-input,
+  .rs-modal-content .classes-suggestor-modal__wrapper button,
+  .keyword-suggestor-modal
+    .classes-suggestor-modal__wrapper
+    .table-wrapper
+    .body_wrapper
+    .table-row,
+  .keyword-suggestor-modal
+    .classes-suggestor-modal__wrapper
+    .table-wrapper
+    .header_wrapper {
+    border: 1px solid var(--text_white) !important;
+  }
+
+  .modal-title .modal-title-heading,
+  .form-container .form-inputs .label-suggestion-class,
+  .form-container .form-action-button,
+  .rs-modal-content .classes-suggestor-modal__wrapper button,
+  .classes-suggestor-modal__wrapper .suggestion-input,
+  .form-action-button .rs-dropdown .rs-dropdown-menu .rs-dropdown-item,
+  .keyword-suggestor-modal .classes-suggestor-modal__wrapper .no-records-found,
+  .body_wrapper .no-results-found {
+    color: var(--text_white) !important;
+  }
+
+  .form-action-button .rs-dropdown .rs-dropdown-menu .rs-dropdown-item:hover {
+    background-color: var(--text_white) !important;
+    color: var(--text_black);
+    border-radius: 10px;
+  }
+
+  .form-action-button .rs-dropdown .rs-dropdown-menu .rs-dropdown-item:hover {
+    color: var(--text_black) !important;
+  }
+}

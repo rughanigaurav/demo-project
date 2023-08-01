@@ -1,0 +1,11 @@
+
+.search-page {
+  .tabcontent {
+    &.show {
+      display: block;
+    }
+    &.hide {
+      display: none;
+    }
+  }
+}

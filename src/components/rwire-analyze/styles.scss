@@ -1,0 +1,237 @@
+@import '../../assets/css/functions.scss';
+
+.droppable-fields-list {
+    max-height: 400px;
+    overflow: auto;
+
+    @include media(largeDesktopAndDown) {
+        max-height: 700px;
+    }
+
+    @include media(smallDesktopAndDown) {
+        // max-height: 550px;
+        max-height: 440px;
+    }
+
+    @include media(smallDesktopDown) {
+        max-height: 315px;
+    }
+
+    @include media(largeDesktopAndUp) {
+        max-height: 1000px;
+    }
+}
+
+.analyze-container {
+    .card {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .card-header {
+        padding: 8px 1.25rem;
+        background-color: #0048A2;
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+        color: #FFFFFF;
+        height: 30px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .card-body {
+        font-size: 14px;
+
+        &.chart-body {
+            height: 700px;
+
+            @include media(smallDesktopAndDown) {
+                height: 440px;
+            }
+
+            @include media(smallDesktopDown) {
+                height: 293px;
+            }
+
+            @include media(largeDesktopAndUp) {
+                height: 980px;
+            }
+        }
+    }
+
+    .card-title {
+        font-size: 16px;
+        line-height: normal;
+        font-weight: normal;
+
+        @include media(smallDesktopAndDown) {
+            font-size: 14px;
+        }
+    }
+}
+
+.axis-block {
+    color: black;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: normal;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: #FFFFFF;
+    border-radius: 30px;
+    flex-basis: 50%;
+
+    @include media(smallDesktopDown) {
+        font-size: 12px;
+    }
+}
+
+.y-axis-label {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+}
+
+.chart-generate-area {
+    height: calc(100% - 110px);
+    border-radius: 10px 10px 0 0;
+}
+
+.drop-box-block {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    cursor: move;
+    float: left;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: inset 0px 1px 0px #DDDDDD, inset -1px 0px 0px #DDDDDD, inset 0px -1px 0px #DDDDDD, inset 1px 0px 0px #DDDDDD;
+    background-image: url(../../images/drag-verticle-dots.svg);
+    background-repeat: no-repeat;
+    background-position: 96% 55%;
+    color: #4e4e4e;
+    text-align: left;
+
+    @include media(smallDesktopDown) {
+        font-size: 11px;
+    }
+}
+
+.analyze-top-block {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.chart-area {
+    max-height: 800px;
+}
+
+.sheets-list-bar {
+    height: 35px;
+    background-color: #0048A2;
+    font-size: 14px;
+    border-radius: 10px;
+
+    @include media(smallDesktopDown) {
+        font-size: 12px;
+        height: 26px;
+    }
+}
+
+.sheet-tag {
+    color: #FFFFFF;
+    background-color: #0674FD;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.filter-button {
+    color: #FFFFFF;
+    background-color: #0048A2;
+}
+
+.analyze-filter-list {
+    width: 0;
+    position: absolute;
+    right: -260px;
+    top: 0;
+
+    &.active {
+        width: 250px;
+    }
+}
+
+.main-chart-area-block {
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+
+.analyze-page {
+    .chart-page .chart-filter {
+        top: 2px;
+    }
+}
+
+.title-change-input {
+    color: #FFFFFF;
+    background-color: #0048A2;
+}
+
+.sheet-delete-block {
+    position: absolute;
+    color: black;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 7px;
+    box-shadow: 0 6px 12px -5px #555555;
+    cursor: pointer;
+
+    &:hover {
+        color: #FFFFFF;
+        background-color: #0048A2;
+    }
+}
+
+.close-icon-axis {
+    position: absolute;
+    right: 15px;
+}
+
+.close-icon-axis > img{
+    height: 15px;
+    width: 15px;
+}
+
+.analyze-search-input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 1px solid #dddddd;
+    color: #000000;
+    outline: none;
+
+    @include media(smallDesktopDown) {
+        height: 26px;
+        font-size: 12px;
+    }
+}
+
+@include media(smallMediumDesktop) {
+    .analyze-fields {
+        margin-right: -1.5rem !important;
+        margin-left: -20px !important;
+    }
+}
+
+@include media(smallDesktopDown) {
+    .analyze-fields {
+        margin-right: -1.5rem !important;
+    }
+}
+
+.chart-filter-modal {
+    @include media(smallDesktopDown) {
+        padding-top: 25px !important;
+        width: 100% !important;
+    }
+}
+
+

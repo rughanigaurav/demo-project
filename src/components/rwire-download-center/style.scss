@@ -1,0 +1,260 @@
+@import "../../assets//css/functions.scss";
+
+.download-center-banner {
+  background: linear-gradient(180deg, #004ba2 0%, #06418a 52.4%, #153773 100%);
+  padding: 10px 0px;
+  width: 100%;
+  align-items: center;
+  padding-left: 42px;
+  .download-center-text {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.filter-search-main {
+  background: #033777;
+  border: 1px solid #033777;
+  border-radius: 20px 20px 0px 0px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.search-input-filter {
+  margin-top: 2px;
+  height: 40px;
+  width: 30vw;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.search-input-icon-button {
+  cursor: pointer;
+  margin-top: 2px;
+  width: 90px;
+  height: 40px;
+  background-color: #ffcb0c;
+  padding: 0px 10px;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+
+  span {
+    color: #000;
+  }
+
+  img {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.download-center-table {
+  border: 1px solid #aeaeae;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 20px 20px;
+  background-color: #ffffff;
+
+  min-height: 450px;
+
+  display: flex;
+  flex-direction: column;
+
+  .table-size {
+    min-height: 370px;
+  }
+
+  .table {
+    margin-bottom: 0;
+    tr {
+      border-bottom: 1px solid #aeaeae;
+    }
+  }
+
+  .pagivation-download-center {
+    justify-content: center;
+    bottom: 0;
+    width: calc(100vw - 300px);
+    z-index: 100;
+    margin-bottom: -10px;
+    margin-top: -10px;
+  }
+}
+
+.row-icons {
+  height: 32px;
+  width: 32px;
+  background-size: 100%;
+
+  @include media(mediumDesktopUp) {
+    height: 37px;
+    width: 37px;
+  }
+}
+
+.download-icon {
+  background-image: url("../../assets/images/download-normal.svg");
+  &:hover {
+    background-image: url("../../assets/images/download-dark.svg");
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin-right: 4px;
+}
+
+.download-loader-icon {
+  background-image: url("../../assets/images/loader.gif");
+}
+
+.mail-icon {
+  background-image: url("../../assets/images/mail-normal.svg");
+  &:hover {
+    background-image: url("../../assets/images/mail-dark.svg");
+  }
+}
+
+.delete-icon {
+  background-image: url("../../assets/images/delete-normal.svg");
+  &:hover {
+    background-image: url("../../assets/images/delete-dark.svg");
+  }
+}
+
+.date-picker-main {
+  background: white;
+  margin-left: 10px;
+  // padding: 5px 0px;
+  border: 1px solid #033777;
+  border-radius: 10px;
+}
+
+.filter-download {
+  align-items: center;
+  height: 40px;
+  margin-top: 2px;
+  .filter-image {
+    position: absolute;
+  }
+}
+
+.date-picker-download {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  color: black;
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border: none;
+  }
+  &::placeholder {
+    color: black;
+  }
+}
+
+.react-datepicker-ignore-onclickoutside::after {
+  border: 0px !important;
+}
+
+.download-filter-center {
+  position: relative;
+  .filter-file-type {
+    position: absolute;
+    z-index: 1;
+    padding-left: 5px;
+    img {
+      width: 15px;
+    }
+  }
+}
+
+.download-details {
+  p {
+    opacity: 0.7;
+  }
+  h6 {
+    font-size: 14px;
+  }
+}
+.download-center-table {
+  .table td,
+  .table th {
+    padding: 0.3rem 1rem;
+  }
+}
+
+.download-center-header {
+  background: #153773;
+  padding: 0px 20px;
+  color: #fff;
+  height: 50px;
+  align-items: center;
+}
+.close-download-center {
+  width: 30px;
+  height: 30px;
+  background: #eef5ff;
+  color: #000;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 4px;
+}
+.download-center-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.email-button-center-download {
+  padding: 0 20px 30px 20px;
+}
+.email-text-download {
+  padding-bottom: 5px;
+  font-weight: 500;
+  color: #000;
+  font-size: 16px;
+  padding-top: 10px;
+}
+.react-select-container__menu > div {
+  padding: 0px !important;
+  border-radius: 10px !important;
+}
+
+.filter-file-download-type {
+  position: relative;
+  text-align: center;
+
+  .react-select-container {
+    width: 200px;
+    height: 40px;
+  }
+}
+
+.filetype-cross {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  cursor: pointer;
+}
+
+.date-cross {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  cursor: pointer;
+}
+
+.no-results-error {
+  color: #000;
+  font-weight: 400;
+  font-family: "Montserrat";
+  padding: 20px 0 0 20px;
+  flex: 1;
+}

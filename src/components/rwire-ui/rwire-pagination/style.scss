@@ -1,0 +1,201 @@
+.pagination {
+  border-radius: 0px;
+  padding: 35px 30px 25px;
+
+  .per_page_block {
+    font-family: sans-serif;
+    color: #000000;
+  }
+
+  .rc-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  .rc-pagination-item {
+    background: #ffffff;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    min-width: 27px;
+    height: 27px;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  .rc-pagination-prev {
+    button {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      display: block;
+      background: #ffffff;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 5px;
+      width: 27px;
+      height: 27px;
+      outline: 0;
+      cursor: pointer;
+      &:after {
+        content: "";
+        background-image: url("../../../images/active-left-arrow.svg");
+        display: block;
+        height: 25px;
+        width: 25px;
+        background-size: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    &.rc-pagination-disabled {
+      button {
+        cursor: default;
+        &:after {
+          content: "";
+          background-image: url("../../../images/left-arrow-grey.svg");
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .rc-pagination-next {
+    button {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 5px;
+      min-width: 27px;
+      min-height: 27px;
+      outline: 0;
+      cursor: pointer;
+      &:after {
+        content: "";
+        background-image: url("../../../images/active-right-arrow.svg");
+        display: block;
+        height: 25px;
+        width: 25px;
+        background-size: 100%;
+      }
+    }
+    &.rc-pagination-disabled {
+      button {
+        cursor: default;
+        &:after {
+          content: "";
+          background-image: url("../../../images/right-arrow-grey.svg");
+        }
+      }
+    }
+  }
+
+  .rc-pagination-item-link {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    margin-right: 10px;
+    &:after {
+      display: block;
+      content: "•••";
+    }
+  }
+
+  .rc-pagination-item-active {
+    background: #0048a2;
+    border: 1px solid #0048a2;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+
+  .jump_to_page {
+    font-family: sans-serif;
+    color: #000000;
+    .pages_input_box {
+      background: #ffffff;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 5px;
+      width: 64px;
+      padding: 0 5px;
+      outline: 0;
+      height: 35px;
+      text-align: center;
+    }
+
+    .go-btn {
+      background: #0048a2;
+      border: 1px solid #0048a2;
+      box-sizing: border-box;
+      border-radius: 5px;
+      font-family: sans-serif;
+      color: #ffffff;
+      padding: 6px 10px;
+      height: 35px;
+      width: 40px;
+    }
+  }
+  .red_border {
+    color: red;
+    border: 1px solid red;
+    background: #fff5f5c0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 65px;
+    padding: 0 5px;
+    outline: 0;
+    height: 35px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1536px) {
+  .pagination {
+    .rc-pagination-prev {
+      button {
+        &:after {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+    .rc-pagination-next {
+      button {
+        &:after {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+    .jump_to_page {
+      .pages_input_box {
+        width: 64px;
+        height: 35px;
+        text-align: center;
+      }
+
+      .go-btn {
+        padding: 6px 8px;
+        height: 35px;
+        width: 40px;
+        text-align: center;
+      }
+    }
+  }
+}

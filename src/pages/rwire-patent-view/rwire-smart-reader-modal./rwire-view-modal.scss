@@ -1,0 +1,167 @@
+@import "../../../assets/css/functions.scss";
+
+.smart-reader-modal.rs-modal {
+  margin: 0 5vw 0 5vw !important;
+  height: 85%;
+  width: 90vw;
+
+  @include media(smallDesktopAndDown) {
+    height: 91%;
+  }
+
+  @media (max-height: 768px) {
+    height: 85%;
+  }
+}
+
+.rs-modal-backdrop {
+  background-color: #4b4b4beb !important;
+}
+
+.smart-reader-modal {
+  top: 75px;
+
+  .rs-modal-dialog {
+    height: 100%;
+  }
+
+  .rs-modal-content {
+    height: 100%;
+    padding: 0;
+  }
+
+  .rs-modal-header {
+    padding: 0;
+    max-height: fit-content;
+    background-color: #aeaeae29;
+
+    .rs-modal-header-close {
+      display: none;
+    }
+  }
+
+  .rs-modal-body {
+    height: 90%;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .body-section {
+    height: 100%;
+  }
+
+  .side {
+    width: 49%;
+    height: 100%;
+  }
+
+  .inner {
+    margin-top: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .view-modal-close-btn {
+    position: absolute;
+    top: -35px;
+    left: calc(100% - 35px);
+
+    .modal__close {
+      color: #fff;
+      font-size: 30px;
+    }
+
+    cursor: pointer;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+
+    button {
+      background: none;
+      font-family: "Montserrat" !important;
+      color: #fff;
+    }
+
+    .pub-no {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .icon {
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .prev {
+      left: 0;
+      right: auto;
+      position: absolute;
+    }
+
+    .next {
+      left: auto;
+      right: 0;
+      width: max-content;
+      position: absolute;
+    }
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+  .smart-reader-modal .rs-modal {
+    height: 87%;
+  }
+
+  .smart-reader-modal {
+    top: 50px;
+
+    h5 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    p,
+    li {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    table {
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .inner {
+      height: 100%;
+    }
+  }
+
+  .smart-reader-modal .rs-modal-body {
+    padding-bottom: 0px !important;
+
+    @include media(smallDesktopAndDown) {
+      max-height: 600px !important;
+    }
+
+    @media (max-height: 768px) {
+      max-height: 80% !important;
+    }
+  }
+
+  .modal-others-block {
+    .cfBlock {
+      h5 {
+        width: 27%;
+
+        @include media(smallDesktopDown) {
+          width: 34%;
+        }
+      }
+    }
+  }
+}

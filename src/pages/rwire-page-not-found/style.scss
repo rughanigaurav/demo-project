@@ -1,0 +1,122 @@
+@import "../../assets/css/functions.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+.not-found-page {
+  // height: calc(100vh - 75px);
+  height: calc(100vh - 40px);
+  overflow: hidden;
+  .banner-img {
+    position: relative;
+    img {
+      height: calc(100vh - 70px);
+      width: 100vw;
+    }
+    @include media(mediumDesktopAndDown) {
+      img {
+        height: calc(100vh - 70px);
+        width: 100vw;
+      }
+    }
+    @include media(smallDesktopAndDown) {
+      img {
+        height: calc(100vh - 40px);
+        width: 100vw;
+      }
+    }
+  }
+  .not-found-page-content {
+    position: absolute;
+    top: 16%;
+    @include media(mediumDesktopAndDown) {
+      top: 19%;
+      left: 9%;
+    }
+    @include media(largeDesktopAndDown) {
+      top: 20%;
+      left: 9%;
+    }
+    @include media(smallDesktopAndDown) {
+      top: 13%;
+      left: 9%;
+    }
+    left: 8%;
+    width: 80vw;
+    color: #000;
+    font-family: "Montserrat";
+    .fof-alert {
+      font-family: "Inter", sans-serif;
+      font-size: 320px;
+      @include media(largeDesktopAndDown) {
+        line-height: 1.1;
+        font-size: 270px;
+        border-bottom: 4px solid #ffcb0c;
+      }
+      @include media(mediumDesktopAndDown) {
+        font-size: 270px;
+      }
+      @include media(smallDesktopAndDown) {
+        font-size: 200px;
+      }
+      line-height: 1.2;
+      font-weight: 900;
+      border-bottom: 4px solid #ffcb0c;
+    }
+    .fof-message-one {
+      @include media(largeDesktopAndDown) {
+        margin-top: 1%;
+        font-size: 50px;
+      }
+      @include media(mediumDesktopAndDown) {
+        margin-top: 1%;
+        font-size: 50px;
+      }
+      @include media(smallDesktopAndDown) {
+        font-size: 37px;
+      }
+      margin-top: 1%;
+      font-size: 75px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .fof-message-two {
+      @include media(largeDesktopAndDown) {
+        // margin-top: 1%;
+        font-size: 30px;
+      }
+      @include media(mediumDesktopAndDown) {
+        font-size: 30px;
+        line-height: 1.3;
+      }
+      @include media(smallDesktopAndDown) {
+        font-size: 20px;
+        line-height: 1.2;
+      }
+      font-size: 50px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .back-to-home-page-btn {
+      background-color: #033777;
+      margin-top: 2%;
+      font-size: 55px;
+      font-family: "Inter", sans-serif;
+      @include media(largeDesktopAndDown) {
+        margin-top: 1%;
+        font-size: 30px;
+      }
+      @include media(mediumDesktopAndDown) {
+        margin-top: 1%;
+        font-size: 25px;
+        line-height: 1.4;
+      }
+      @include media(smallDesktopAndDown) {
+        margin-top: 1%;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      line-height: 1.5;
+      font-weight: 800;
+      color: #fff;
+    }
+  }
+}

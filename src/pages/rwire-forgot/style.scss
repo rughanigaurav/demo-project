@@ -1,0 +1,30 @@
+@import "../../assets/css/functions.scss";
+
+.forgot-link {
+  color: #FFFFFF;
+  text-decoration: underline;
+
+  &:hover {
+    color: #3dd5f3;
+    // text-decoration: none;
+  }
+}
+
+.login-page-design {
+  .reset-password-error {
+    font-size: 42px;
+  }
+}
+
+.reset-password-page, .forgot-password-page {
+  &.login-page-design {
+    .link-info {
+      font-size: 24px;
+    }
+    @include media(smallDesktopAndDown) {
+      .login-heading {
+        font-size: 32px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import "../../assets/css/functions.scss";
+
+.maintainance-main {
+  background-color: #0048a2;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  overflow: auto;
+  font-family: "Montserrat";
+  color: #fff;
+}
+.maintainance-inner {
+  position: absolute;
+  display: flex;
+  gap: 5%;
+  top: 30%;
+  left: 10%;
+  width: 90%;
+  @include media(mediumDesktopAndDown) {
+    width: 70%;
+    left: 10%;
+  }
+  @include media(smallDesktopAndDown) {
+    width: 70%;
+    left: 7%;
+  }
+}
+.maintainance_logo {
+  height: 300px;
+  @include media(mediumDesktopAndDown) {
+    height: 250px;
+  }
+  @include media(smallDesktopAndDown) {
+    height: 200px;
+  }
+}
+.maintainance-text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.heading_text {
+  height: 200px;
+  position: relative;
+  border-bottom: 3px solid #fff;
+  @include media(mediumDesktopAndDown) {
+    height: 150px;
+  }
+  @include media(smallDesktopAndDown) {
+    height: 130px;
+  }
+  span {
+    position: absolute;
+    font-size: 70px;
+    line-height: 1.3;
+    bottom: 5px;
+    font-weight: 600;
+    @include media(mediumDesktopAndDown) {
+      font-size: 45px;
+    }
+    @include media(smallDesktopAndDown) {
+      font-size: 40px;
+    }
+  }
+}
+
+.apology_text {
+  padding-top: 10px;
+  height: 45px;
+  font-size: 1.5rem;
+  @include media(mediumDesktopAndDown) {
+    font-size: 1.3rem;
+    padding-top: 5px;
+  }
+  @include media(smallDesktopAndDown) {
+    font-size: 1rem;
+    padding-top: 5px;
+  }
+}

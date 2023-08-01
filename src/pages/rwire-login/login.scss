@@ -1,0 +1,26 @@
+@import "../../assets/css/functions.scss";
+
+.password-input-section {
+  border: none;
+  border-radius: 200px;
+  .rs-input-group {
+    border-radius: 10px !important;
+    input.rs-input ~ .rs-input-group-addon {
+      right: 10px;
+      vertical-align: middle;
+    }
+  }
+  svg {
+    height: 2rem;
+    width: 2rem;
+    @include media(largeDesktopAndDown) {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    @include media(smallDesktopAndDown) {
+      height: 1.1rem;
+      width: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "./functions.scss";
+
+.column-list {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.column {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.national-notification-tooltip {
+  .tooltip-inner {
+    max-height: 200px;
+    @include media(smallDesktopAndDown) {
+      max-height: 150px;
+    }
+    overflow: auto;
+  }
+}
+.national-notification-i-icon {
+  color: black;
+  padding-top: 0;
+  margin-inline: 5px;
+  font-size: 20px;
+  @include media(smallDesktopAndDown) {
+    font-size: 15px;
+    padding-top: 4px;
+  }
+}

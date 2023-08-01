@@ -1,0 +1,17 @@
+@import "../../../index.scss";
+
+.dark-mode {
+	.link-expire-page .upper-block {
+		background: var(--search_background);
+	}
+
+	.link-expire-page .lower-block,
+	.link-expire-page .lower-block .inner-block,
+	.link-expire-img img {
+		background: var(--header_bg) !important;
+	}
+
+	.link-expire-page .lower-block .inner-block .message-block .link-expire-message {
+		color: var(--text_white)
+	}
+}

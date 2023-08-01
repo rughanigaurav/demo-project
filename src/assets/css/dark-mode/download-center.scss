@@ -1,0 +1,93 @@
+@import "../../../index.scss";
+
+.dark-mode {
+  .main-div-download,
+  .download-center-table,
+  .download-center-main .file-type-download .react-select-container__control,
+  .download-center-banner .table-right-download-center .mail-icon,
+  .download-center-main .date-picker-main,
+  .download-center-main .date-picker-download,
+  .react-datepicker-popper div:not(.react-datepicker__day),
+  .react-datepicker .react-datepicker__trianglee::before,
+  .download-center-table .table-right-download-center,
+  .page-number-dropdown div,
+  .jump_to_page input,
+  .pagination .rc-pagination-item {
+    background-color: var(--body_color) !important;
+  }
+
+  .background-line {
+    background: var(--body_color) !important;
+  }
+
+  .download-center-banner {
+    background: var(--search_background) !important;
+  }
+
+  .filter-search-main {
+    background-color: var(--search_background);
+  }
+
+  .download-center-table .table,
+  .download-center-text,
+  .download-center-main
+    .file-type-download
+    .react-select-container__placeholder,
+  .download-center-main .date-picker-download::placeholder,
+  .react-datepicker-popper div,
+  .download-center-main .react-datepicker-wrapper .date-picker-download,
+  .download-center-main .no-results-error,
+  .page-number-dropdown div,
+  .jump_to_page .pages_input_box,
+  .pagination .rc-pagination-item,
+  .filter-file-download-type .react-select-container__single-value {
+    color: var(--text_white);
+  }
+
+  .react-datepicker-popper > div .react-datepicker__day--selected,
+  .react-datepicker-popper > div .react-datepicker__day:hover,
+  .pagination .rc-pagination-item-active,
+  .jump_to_page .go-btn {
+    color: var(--text_black);
+  }
+
+  .download-center-main .filter-file-type img,
+  .download-center-main .date-picker-main .type-image-download img,
+  .filter-search-main .date-cross img,
+  .filter-file-download-type .filetype-cross {
+    filter: invert(100%);
+  }
+
+  .download-center-main {
+    .filter-search-main,
+    .date-picker-main,
+    .file-type-download .react-select-container__control,
+    .jump_to_page .pages_input_box,
+    .pagination .rc-pagination-item {
+      border: 1px solid var(--text_white);
+    }
+  }
+
+  .pagination .rc-pagination-item-active,
+  .jump_to_page .go-btn {
+    border: 1px solid var(--text_black);
+  }
+
+  .download-center-main .react-datepicker-wrapper input {
+    border: none;
+  }
+
+  .react-datepicker-popper .react-datepicker__day--keyboard-selected,
+  .react-datepicker__day--disabled:hover {
+    background-color: var(--text_white);
+  }
+
+  .react-datepicker-popper > div .react-datepicker__day--keyboard-selected {
+    background-color: #1d5d90;
+  }
+
+  .pagination .rc-pagination-item-active,
+  .jump_to_page .go-btn {
+    background: #ffcb0c !important;
+  }
+}

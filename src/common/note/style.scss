@@ -1,0 +1,178 @@
+@import "../../assets/css/functions.scss";
+
+.patent__view__page {
+
+  .patent-notes-model-wrapper {
+    position: relative;
+    z-index: 99;
+  }
+
+  .note-modal {
+    position: absolute;
+    top: 170px;
+    right: 220px;
+    visibility: hidden;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    pointer-events: auto;
+    opacity: 0;
+
+    @include media(mediumDesktopAndDown) {
+      right: 100px;
+    }
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .close-icon {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .note-modal-body {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+      word-wrap: break-word;
+
+      .form-control {
+        padding: 0;
+      }
+
+      .slate-editor {
+        height: 300px;
+        width: 400px;
+        border: 1px solid #605e5e;
+        .menu.toolbar-menu {
+          border-bottom: 1px solid #605e5e;
+          display: flex;
+          .editor-btn {
+            padding: 3px 10px;
+            display: block;
+          }
+          .link-btn {
+            img {
+              height: 15px;
+              width: 20px;
+            }
+          }
+        }
+
+        .editor {
+          height: 100%;
+          width: 100%;
+          &.dark-theme {
+            color: white;
+            >div {
+              color: white;
+            }
+          }
+
+          >div {
+            outline: none;
+            padding: 5px;
+            height: 90%;
+            width: 100%;
+            overflow-y: auto;
+          }
+        }
+      }
+
+      .__footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 0 0 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.dark-mode {
+
+  .open.note-modal  {
+    background-color: #2b2b2b;
+  }
+
+}
+
+.smart-reader-modal {
+  .note-modal {
+    padding-top: 20px;
+    position: relative;
+    &.open  {
+      background: none !important;
+    }
+    .form-control {
+      padding: 0;
+    }
+    .close-icon {
+      position: absolute;
+      top: 26px;
+      right: 20px;
+      cursor: pointer;
+    }
+    .slate-editor {
+      height: 590px;
+      border: 1px solid #605e5e;
+      @include media(mediumDesktopAndDown) {
+        height: 422px;
+        @include media(smallDesktopAndDown) {
+          height: 330px;
+          @include media(smallDesktopDown) {
+            height: 280px;
+          }
+        }
+      }
+      .menu.toolbar-menu {
+        border-bottom: 1px solid #605e5e;
+        display: flex;
+        .editor-btn {
+          padding: 3px 10px;
+          display: block;
+        }
+        .link-btn {
+          img {
+            height: 15px;
+            width: 20px;
+          }
+        }
+      }
+    }
+    .editor {
+      height: 100%;
+      width: 100%;
+      @include media(smallDesktopAndDown) {
+        height: 95%;
+      }
+      &.dark-theme {
+        color: white;
+        >div {
+          color: white;
+        }
+      }
+
+      >div {
+        outline: none;
+        padding: 5px;
+        height: 95%;
+        width: 100%;
+        overflow-y: auto;
+      }
+    }
+    .__footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 0 0 0;
+      text-align: right;
+    }
+  }
+}

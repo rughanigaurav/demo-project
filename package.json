@@ -1,0 +1,101 @@
+{
+  "name": "rwire_react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@codemirror/language": "^6.0.0",
+    "@lezer/generator": "^1.1.3",
+    "@lezer/highlight": "^1.1.3",
+    "@lezer/lr": "^1.0.0",
+    "@pronestor/react-zoom-pan-pinch": "^2.4.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@uiw/codemirror-themes": "^4.19.5",
+    "@uiw/react-codemirror": "^4.19.5",
+    "axios": "^1.2.2",
+    "escape-html": "^1.0.3",
+    "export-from-json": "^1.7.0",
+    "fusioncharts": "^3.19.0",
+    "i18next": "^21.10.0",
+    "i18next-browser-languagedetector": "^6.1.8",
+    "i18next-xhr-backend": "^3.2.2",
+    "is-url": "^1.2.4",
+    "lightgallery": "^2.7.0",
+    "moment": "^2.29.1",
+    "rc-pagination": "^3.1.13",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
+    "react-colorful": "^5.6.1",
+    "react-datepicker": "^4.8.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-drag-listview": "^2.0.0",
+    "react-folder-tree": "^5.1.1",
+    "react-fusioncharts": "^4.0.0",
+    "react-gesture-responder": "^2.1.0",
+    "react-grid-dnd": "^2.1.2",
+    "react-i18next": "^11.18.6",
+    "react-icons": "^4.7.1",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.2",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.6.1",
+    "react-sortable-hoc": "^2.0.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "rsuite": "^5.22.1",
+    "slate": "^0.94.1",
+    "slate-history": "^0.93.0",
+    "slate-hyperscript": "^0.77.0",
+    "slate-react": "^0.97.1",
+    "unfetch": "^4.2.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "sass": "^1.56.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "install:package": "node -v && npm -v && npm i --legacy-peer-deps",
+    "update:prod":"npm run install:package && npm run build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "prepare": "husky install",
+    "build-analytics": "PUBLIC_URL=/front npm run update:prod",
+    "build-beta": "PUBLIC_URL=/ npm run update:prod"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "no-console": "warn",
+      "no-alert": "warn",
+      "no-debugger": "warn"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  }
+}

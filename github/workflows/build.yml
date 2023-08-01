@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - rwire-staging
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
